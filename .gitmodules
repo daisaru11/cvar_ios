@@ -1,0 +1,3 @@
+[submodule "cvar_ios/core"]
+	path = cvar_ios/core
+	url = https://github.com/daisaru11/cvar_core.git

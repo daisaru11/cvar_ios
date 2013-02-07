@@ -1,0 +1,570 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		422EE2D416AEE47E00643BCA /* MapCellStatus.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 422EE2D116AEE47D00643BCA /* MapCellStatus.cpp */; };
+		422EE2D516AEE47E00643BCA /* Map.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 422EE2D316AEE47E00643BCA /* Map.cpp */; };
+		422EE2D916AEED4700643BCA /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 422EE2D716AEED3900643BCA /* CoreMotion.framework */; };
+		42632CD916AD6D40000EB95B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42632CD816AD6D40000EB95B /* UIKit.framework */; };
+		42632CDB16AD6D40000EB95B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42632CDA16AD6D40000EB95B /* Foundation.framework */; };
+		42632CDD16AD6D40000EB95B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42632CDC16AD6D40000EB95B /* CoreGraphics.framework */; };
+		42632CE316AD6D40000EB95B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 42632CE116AD6D40000EB95B /* InfoPlist.strings */; };
+		42632CE516AD6D40000EB95B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 42632CE416AD6D40000EB95B /* main.m */; };
+		42632CE916AD6D40000EB95B /* DSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 42632CE816AD6D40000EB95B /* DSAppDelegate.m */; };
+		42632CEB16AD6D40000EB95B /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 42632CEA16AD6D40000EB95B /* Default.png */; };
+		42632CED16AD6D40000EB95B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42632CEC16AD6D40000EB95B /* Default@2x.png */; };
+		42632CEF16AD6D40000EB95B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42632CEE16AD6D40000EB95B /* Default-568h@2x.png */; };
+		42632CF216AD6D40000EB95B /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42632CF016AD6D40000EB95B /* MainStoryboard.storyboard */; };
+		42632CF516AD6D40000EB95B /* DSViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 42632CF416AD6D40000EB95B /* DSViewController.mm */; };
+		42632D0916AD6EC1000EB95B /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42632D0816AD6EC1000EB95B /* opencv2.framework */; };
+		42632D0A16AD6EE3000EB95B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42632D0616AD6EAA000EB95B /* AVFoundation.framework */; };
+		42632D0B16AD6EE3000EB95B /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42632D0016AD6E8D000EB95B /* CoreMedia.framework */; };
+		42632D0C16AD6EE3000EB95B /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42632D0116AD6E8D000EB95B /* CoreVideo.framework */; };
+		42632D0D16AD6EE3000EB95B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42632D0216AD6E8D000EB95B /* QuartzCore.framework */; };
+		42632D1216AD702F000EB95B /* UIImage+OpenCV.mm in Sources */ = {isa = PBXBuildFile; fileRef = 42632D1116AD702F000EB95B /* UIImage+OpenCV.mm */; };
+		428704CA16B36268002EE9A9 /* Relocalizer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 428704C716B36268002EE9A9 /* Relocalizer.cpp */; };
+		428704CB16B36268002EE9A9 /* MainProcess.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 428704C916B36268002EE9A9 /* MainProcess.cpp */; };
+		429D1AFA16B9D8F600200403 /* JLinkage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 429D1AEE16B9D8F500200403 /* JLinkage.cpp */; };
+		429D1AFC16B9D8F600200403 /* LineExtracterLSD.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 429D1AF316B9D8F500200403 /* LineExtracterLSD.cpp */; };
+		429D1AFD16B9D8F600200403 /* lsd.c in Sources */ = {isa = PBXBuildFile; fileRef = 429D1AF616B9D8F500200403 /* lsd.c */; };
+		429D1AFE16B9D8F600200403 /* PlanarFinder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 429D1AF816B9D8F500200403 /* PlanarFinder.cpp */; };
+		429DC36616BFCB45001FB65C /* OptimizationGN2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 429DC35716BFCB45001FB65C /* OptimizationGN2.cpp */; };
+		429DC36716BFCB45001FB65C /* OptimizationRANSAC.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 429DC35916BFCB45001FB65C /* OptimizationRANSAC.cpp */; };
+		429DC36816BFCB45001FB65C /* PoseUpdaterGN.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 429DC35B16BFCB45001FB65C /* PoseUpdaterGN.cpp */; };
+		429DC36916BFCB46001FB65C /* PoseUpdaterGN2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 429DC35D16BFCB45001FB65C /* PoseUpdaterGN2.cpp */; };
+		429DC36A16BFCB46001FB65C /* PoseUpdaterRANSAC.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 429DC35F16BFCB45001FB65C /* PoseUpdaterRANSAC.cpp */; };
+		429DC38116C07407001FB65C /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 429DC37E16C07407001FB65C /* Timer.cpp */; };
+		429DC38216C07407001FB65C /* TimerManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 429DC37F16C07407001FB65C /* TimerManager.cpp */; };
+		429DC38B16C0D227001FB65C /* DSBaseCaptureViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 429DC38A16C0D227001FB65C /* DSBaseCaptureViewController.mm */; };
+		429DC38E16C0DA53001FB65C /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 429DC38C16C0DA3E001FB65C /* OpenGLES.framework */; };
+		429DC39716C0DAC2001FB65C /* EAGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 429DC39416C0DAC2001FB65C /* EAGLView.m */; };
+		429DC39D16C33857001FB65C /* cocacola.png in Resources */ = {isa = PBXBuildFile; fileRef = 429DC39B16C33856001FB65C /* cocacola.png */; };
+		429DC39E16C33857001FB65C /* redbull.png in Resources */ = {isa = PBXBuildFile; fileRef = 429DC39C16C33856001FB65C /* redbull.png */; };
+		42DB675116ADFADA001D5226 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42DB674B16ADFAB3001D5226 /* Accelerate.framework */; };
+		42DB675216ADFADA001D5226 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42DB674C16ADFAB3001D5226 /* AssetsLibrary.framework */; };
+		42DB675316ADFADA001D5226 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42DB674D16ADFAB3001D5226 /* CoreImage.framework */; };
+		42DB676616AE1733001D5226 /* CylindricalProjector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42DB675616AE1733001D5226 /* CylindricalProjector.cpp */; };
+		42DB676716AE1733001D5226 /* Keypoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42DB675816AE1733001D5226 /* Keypoint.cpp */; };
+		42DB676816AE1733001D5226 /* KeypointMatcher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42DB675A16AE1733001D5226 /* KeypointMatcher.cpp */; };
+		42DB676916AE1733001D5226 /* MapCell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42DB675C16AE1733001D5226 /* MapCell.cpp */; };
+		42DB676A16AE1733001D5226 /* Mapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42DB675E16AE1733001D5226 /* Mapper.cpp */; };
+		42DB676B16AE1733001D5226 /* Optimization.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42DB676016AE1733001D5226 /* Optimization.cpp */; };
+		42DB676C16AE1733001D5226 /* Projector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42DB676216AE1733001D5226 /* Projector.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		422EE2D016AEE47D00643BCA /* MapCellStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapCellStatus.h; sourceTree = "<group>"; };
+		422EE2D116AEE47D00643BCA /* MapCellStatus.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MapCellStatus.cpp; sourceTree = "<group>"; };
+		422EE2D216AEE47E00643BCA /* Map.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Map.h; sourceTree = "<group>"; };
+		422EE2D316AEE47E00643BCA /* Map.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Map.cpp; sourceTree = "<group>"; };
+		422EE2D716AEED3900643BCA /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		42632CD416AD6D40000EB95B /* cvar_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cvar_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		42632CD816AD6D40000EB95B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		42632CDA16AD6D40000EB95B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		42632CDC16AD6D40000EB95B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		42632CE016AD6D40000EB95B /* cvar_ios-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "cvar_ios-Info.plist"; sourceTree = "<group>"; };
+		42632CE216AD6D40000EB95B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		42632CE416AD6D40000EB95B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		42632CE616AD6D40000EB95B /* cvar_ios-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "cvar_ios-Prefix.pch"; sourceTree = "<group>"; };
+		42632CE716AD6D40000EB95B /* DSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSAppDelegate.h; sourceTree = "<group>"; };
+		42632CE816AD6D40000EB95B /* DSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSAppDelegate.m; sourceTree = "<group>"; };
+		42632CEA16AD6D40000EB95B /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		42632CEC16AD6D40000EB95B /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		42632CEE16AD6D40000EB95B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		42632CF116AD6D40000EB95B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		42632CF316AD6D40000EB95B /* DSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSViewController.h; sourceTree = "<group>"; };
+		42632CF416AD6D40000EB95B /* DSViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = DSViewController.mm; sourceTree = "<group>"; };
+		42632D0016AD6E8D000EB95B /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		42632D0116AD6E8D000EB95B /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		42632D0216AD6E8D000EB95B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		42632D0616AD6EAA000EB95B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		42632D0816AD6EC1000EB95B /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = opencv2.framework; path = ../../package/opencv2.framework; sourceTree = "<group>"; };
+		42632D1016AD702F000EB95B /* UIImage+OpenCV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+OpenCV.h"; sourceTree = "<group>"; };
+		42632D1116AD702F000EB95B /* UIImage+OpenCV.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "UIImage+OpenCV.mm"; sourceTree = "<group>"; };
+		428602F016B1D55A00F27B82 /* cvconvert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cvconvert.h; sourceTree = "<group>"; };
+		428704C616B36268002EE9A9 /* Relocalizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Relocalizer.h; sourceTree = "<group>"; };
+		428704C716B36268002EE9A9 /* Relocalizer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Relocalizer.cpp; sourceTree = "<group>"; };
+		428704C816B36268002EE9A9 /* MainProcess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainProcess.h; sourceTree = "<group>"; };
+		428704C916B36268002EE9A9 /* MainProcess.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MainProcess.cpp; sourceTree = "<group>"; };
+		429D1AED16B9D8F500200403 /* cvutil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cvutil.h; sourceTree = "<group>"; };
+		429D1AEE16B9D8F500200403 /* JLinkage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = JLinkage.cpp; sourceTree = "<group>"; };
+		429D1AEF16B9D8F500200403 /* JLinkage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLinkage.h; sourceTree = "<group>"; };
+		429D1AF016B9D8F500200403 /* Line.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Line.h; sourceTree = "<group>"; };
+		429D1AF316B9D8F500200403 /* LineExtracterLSD.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LineExtracterLSD.cpp; sourceTree = "<group>"; };
+		429D1AF416B9D8F500200403 /* LineExtracterLSD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineExtracterLSD.h; sourceTree = "<group>"; };
+		429D1AF616B9D8F500200403 /* lsd.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; path = lsd.c; sourceTree = "<group>"; };
+		429D1AF716B9D8F500200403 /* lsd.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = lsd.h; sourceTree = "<group>"; };
+		429D1AF816B9D8F500200403 /* PlanarFinder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlanarFinder.cpp; sourceTree = "<group>"; };
+		429D1AF916B9D8F600200403 /* PlanarFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlanarFinder.h; sourceTree = "<group>"; };
+		429DC35616BFCA79001FB65C /* cvarconf.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cvarconf.h; sourceTree = "<group>"; };
+		429DC35716BFCB45001FB65C /* OptimizationGN2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OptimizationGN2.cpp; sourceTree = "<group>"; };
+		429DC35816BFCB45001FB65C /* OptimizationGN2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptimizationGN2.h; sourceTree = "<group>"; };
+		429DC35916BFCB45001FB65C /* OptimizationRANSAC.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OptimizationRANSAC.cpp; sourceTree = "<group>"; };
+		429DC35A16BFCB45001FB65C /* OptimizationRANSAC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptimizationRANSAC.h; sourceTree = "<group>"; };
+		429DC35B16BFCB45001FB65C /* PoseUpdaterGN.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PoseUpdaterGN.cpp; sourceTree = "<group>"; };
+		429DC35C16BFCB45001FB65C /* PoseUpdaterGN.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoseUpdaterGN.h; sourceTree = "<group>"; };
+		429DC35D16BFCB45001FB65C /* PoseUpdaterGN2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PoseUpdaterGN2.cpp; sourceTree = "<group>"; };
+		429DC35E16BFCB45001FB65C /* PoseUpdaterGN2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoseUpdaterGN2.h; sourceTree = "<group>"; };
+		429DC35F16BFCB45001FB65C /* PoseUpdaterRANSAC.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PoseUpdaterRANSAC.cpp; sourceTree = "<group>"; };
+		429DC36016BFCB45001FB65C /* PoseUpdaterRANSAC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoseUpdaterRANSAC.h; sourceTree = "<group>"; };
+		429DC37D16C07407001FB65C /* Timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Timer.h; sourceTree = "<group>"; };
+		429DC37E16C07407001FB65C /* Timer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Timer.cpp; sourceTree = "<group>"; };
+		429DC37F16C07407001FB65C /* TimerManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TimerManager.cpp; sourceTree = "<group>"; };
+		429DC38016C07407001FB65C /* TimerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerManager.h; sourceTree = "<group>"; };
+		429DC38916C0D227001FB65C /* DSBaseCaptureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSBaseCaptureViewController.h; sourceTree = "<group>"; };
+		429DC38A16C0D227001FB65C /* DSBaseCaptureViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = DSBaseCaptureViewController.mm; sourceTree = "<group>"; };
+		429DC38C16C0DA3E001FB65C /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		429DC39416C0DAC2001FB65C /* EAGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EAGLView.m; sourceTree = "<group>"; };
+		429DC39516C0DAC2001FB65C /* EAGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EAGLView.h; sourceTree = "<group>"; };
+		429DC39B16C33856001FB65C /* cocacola.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cocacola.png; sourceTree = "<group>"; };
+		429DC39C16C33856001FB65C /* redbull.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redbull.png; sourceTree = "<group>"; };
+		42DB674B16ADFAB3001D5226 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		42DB674C16ADFAB3001D5226 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		42DB674D16ADFAB3001D5226 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		42DB675516AE1733001D5226 /* cvmath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cvmath.h; sourceTree = "<group>"; };
+		42DB675616AE1733001D5226 /* CylindricalProjector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CylindricalProjector.cpp; sourceTree = "<group>"; };
+		42DB675716AE1733001D5226 /* CylindricalProjector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CylindricalProjector.h; sourceTree = "<group>"; };
+		42DB675816AE1733001D5226 /* Keypoint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Keypoint.cpp; sourceTree = "<group>"; };
+		42DB675916AE1733001D5226 /* Keypoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Keypoint.h; sourceTree = "<group>"; };
+		42DB675A16AE1733001D5226 /* KeypointMatcher.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KeypointMatcher.cpp; sourceTree = "<group>"; };
+		42DB675B16AE1733001D5226 /* KeypointMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeypointMatcher.h; sourceTree = "<group>"; };
+		42DB675C16AE1733001D5226 /* MapCell.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MapCell.cpp; sourceTree = "<group>"; };
+		42DB675D16AE1733001D5226 /* MapCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapCell.h; sourceTree = "<group>"; };
+		42DB675E16AE1733001D5226 /* Mapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Mapper.cpp; sourceTree = "<group>"; };
+		42DB675F16AE1733001D5226 /* Mapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mapper.h; sourceTree = "<group>"; };
+		42DB676016AE1733001D5226 /* Optimization.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Optimization.cpp; sourceTree = "<group>"; };
+		42DB676116AE1733001D5226 /* Optimization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Optimization.h; sourceTree = "<group>"; };
+		42DB676216AE1733001D5226 /* Projector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Projector.cpp; sourceTree = "<group>"; };
+		42DB676316AE1733001D5226 /* Projector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Projector.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		42632CD116AD6D40000EB95B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				429DC38E16C0DA53001FB65C /* OpenGLES.framework in Frameworks */,
+				422EE2D916AEED4700643BCA /* CoreMotion.framework in Frameworks */,
+				42DB675116ADFADA001D5226 /* Accelerate.framework in Frameworks */,
+				42DB675216ADFADA001D5226 /* AssetsLibrary.framework in Frameworks */,
+				42DB675316ADFADA001D5226 /* CoreImage.framework in Frameworks */,
+				42632CDB16AD6D40000EB95B /* Foundation.framework in Frameworks */,
+				42632D0A16AD6EE3000EB95B /* AVFoundation.framework in Frameworks */,
+				42632D0B16AD6EE3000EB95B /* CoreMedia.framework in Frameworks */,
+				42632D0C16AD6EE3000EB95B /* CoreVideo.framework in Frameworks */,
+				42632D0D16AD6EE3000EB95B /* QuartzCore.framework in Frameworks */,
+				42632CD916AD6D40000EB95B /* UIKit.framework in Frameworks */,
+				42632CDD16AD6D40000EB95B /* CoreGraphics.framework in Frameworks */,
+				42632D0916AD6EC1000EB95B /* opencv2.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		42632CC916AD6D40000EB95B = {
+			isa = PBXGroup;
+			children = (
+				42DB675416AE1733001D5226 /* core */,
+				42632D0F16AD702F000EB95B /* common */,
+				42632CDE16AD6D40000EB95B /* cvar_ios */,
+				42632CD716AD6D40000EB95B /* Frameworks */,
+				42632CD516AD6D40000EB95B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		42632CD516AD6D40000EB95B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				42632CD416AD6D40000EB95B /* cvar_ios.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		42632CD716AD6D40000EB95B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				429DC38C16C0DA3E001FB65C /* OpenGLES.framework */,
+				422EE2D716AEED3900643BCA /* CoreMotion.framework */,
+				42DB674B16ADFAB3001D5226 /* Accelerate.framework */,
+				42DB674C16ADFAB3001D5226 /* AssetsLibrary.framework */,
+				42DB674D16ADFAB3001D5226 /* CoreImage.framework */,
+				42632D0616AD6EAA000EB95B /* AVFoundation.framework */,
+				42632D0016AD6E8D000EB95B /* CoreMedia.framework */,
+				42632D0116AD6E8D000EB95B /* CoreVideo.framework */,
+				42632D0216AD6E8D000EB95B /* QuartzCore.framework */,
+				42632D0816AD6EC1000EB95B /* opencv2.framework */,
+				42632CD816AD6D40000EB95B /* UIKit.framework */,
+				42632CDA16AD6D40000EB95B /* Foundation.framework */,
+				42632CDC16AD6D40000EB95B /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		42632CDE16AD6D40000EB95B /* cvar_ios */ = {
+			isa = PBXGroup;
+			children = (
+				429DC39B16C33856001FB65C /* cocacola.png */,
+				429DC39C16C33856001FB65C /* redbull.png */,
+				429DC39416C0DAC2001FB65C /* EAGLView.m */,
+				429DC39516C0DAC2001FB65C /* EAGLView.h */,
+				42632CE716AD6D40000EB95B /* DSAppDelegate.h */,
+				42632CE816AD6D40000EB95B /* DSAppDelegate.m */,
+				42632CF016AD6D40000EB95B /* MainStoryboard.storyboard */,
+				42632CF316AD6D40000EB95B /* DSViewController.h */,
+				42632CF416AD6D40000EB95B /* DSViewController.mm */,
+				428602F016B1D55A00F27B82 /* cvconvert.h */,
+				42632CDF16AD6D40000EB95B /* Supporting Files */,
+				429DC35616BFCA79001FB65C /* cvarconf.h */,
+				429DC38916C0D227001FB65C /* DSBaseCaptureViewController.h */,
+				429DC38A16C0D227001FB65C /* DSBaseCaptureViewController.mm */,
+			);
+			path = cvar_ios;
+			sourceTree = "<group>";
+		};
+		42632CDF16AD6D40000EB95B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				42632CE016AD6D40000EB95B /* cvar_ios-Info.plist */,
+				42632CE116AD6D40000EB95B /* InfoPlist.strings */,
+				42632CE416AD6D40000EB95B /* main.m */,
+				42632CE616AD6D40000EB95B /* cvar_ios-Prefix.pch */,
+				42632CEA16AD6D40000EB95B /* Default.png */,
+				42632CEC16AD6D40000EB95B /* Default@2x.png */,
+				42632CEE16AD6D40000EB95B /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		42632D0F16AD702F000EB95B /* common */ = {
+			isa = PBXGroup;
+			children = (
+				42632D1016AD702F000EB95B /* UIImage+OpenCV.h */,
+				42632D1116AD702F000EB95B /* UIImage+OpenCV.mm */,
+			);
+			name = common;
+			path = cvar_ios/common;
+			sourceTree = "<group>";
+		};
+		429D1AF516B9D8F500200403 /* lsd */ = {
+			isa = PBXGroup;
+			children = (
+				429D1AF616B9D8F500200403 /* lsd.c */,
+				429D1AF716B9D8F500200403 /* lsd.h */,
+			);
+			path = lsd;
+			sourceTree = "<group>";
+		};
+		42DB675416AE1733001D5226 /* core */ = {
+			isa = PBXGroup;
+			children = (
+				429DC37D16C07407001FB65C /* Timer.h */,
+				429DC37E16C07407001FB65C /* Timer.cpp */,
+				429DC37F16C07407001FB65C /* TimerManager.cpp */,
+				429DC38016C07407001FB65C /* TimerManager.h */,
+				429DC35716BFCB45001FB65C /* OptimizationGN2.cpp */,
+				429DC35816BFCB45001FB65C /* OptimizationGN2.h */,
+				429DC35916BFCB45001FB65C /* OptimizationRANSAC.cpp */,
+				429DC35A16BFCB45001FB65C /* OptimizationRANSAC.h */,
+				429DC35B16BFCB45001FB65C /* PoseUpdaterGN.cpp */,
+				429DC35C16BFCB45001FB65C /* PoseUpdaterGN.h */,
+				429DC35D16BFCB45001FB65C /* PoseUpdaterGN2.cpp */,
+				429DC35E16BFCB45001FB65C /* PoseUpdaterGN2.h */,
+				429DC35F16BFCB45001FB65C /* PoseUpdaterRANSAC.cpp */,
+				429DC36016BFCB45001FB65C /* PoseUpdaterRANSAC.h */,
+				429D1AED16B9D8F500200403 /* cvutil.h */,
+				429D1AEE16B9D8F500200403 /* JLinkage.cpp */,
+				429D1AEF16B9D8F500200403 /* JLinkage.h */,
+				429D1AF016B9D8F500200403 /* Line.h */,
+				429D1AF316B9D8F500200403 /* LineExtracterLSD.cpp */,
+				429D1AF416B9D8F500200403 /* LineExtracterLSD.h */,
+				429D1AF516B9D8F500200403 /* lsd */,
+				429D1AF816B9D8F500200403 /* PlanarFinder.cpp */,
+				429D1AF916B9D8F600200403 /* PlanarFinder.h */,
+				428704C616B36268002EE9A9 /* Relocalizer.h */,
+				428704C716B36268002EE9A9 /* Relocalizer.cpp */,
+				428704C816B36268002EE9A9 /* MainProcess.h */,
+				428704C916B36268002EE9A9 /* MainProcess.cpp */,
+				422EE2D016AEE47D00643BCA /* MapCellStatus.h */,
+				422EE2D116AEE47D00643BCA /* MapCellStatus.cpp */,
+				422EE2D216AEE47E00643BCA /* Map.h */,
+				422EE2D316AEE47E00643BCA /* Map.cpp */,
+				42DB675516AE1733001D5226 /* cvmath.h */,
+				42DB675616AE1733001D5226 /* CylindricalProjector.cpp */,
+				42DB675716AE1733001D5226 /* CylindricalProjector.h */,
+				42DB675816AE1733001D5226 /* Keypoint.cpp */,
+				42DB675916AE1733001D5226 /* Keypoint.h */,
+				42DB675A16AE1733001D5226 /* KeypointMatcher.cpp */,
+				42DB675B16AE1733001D5226 /* KeypointMatcher.h */,
+				42DB675C16AE1733001D5226 /* MapCell.cpp */,
+				42DB675D16AE1733001D5226 /* MapCell.h */,
+				42DB675E16AE1733001D5226 /* Mapper.cpp */,
+				42DB675F16AE1733001D5226 /* Mapper.h */,
+				42DB676016AE1733001D5226 /* Optimization.cpp */,
+				42DB676116AE1733001D5226 /* Optimization.h */,
+				42DB676216AE1733001D5226 /* Projector.cpp */,
+				42DB676316AE1733001D5226 /* Projector.h */,
+			);
+			name = core;
+			path = cvar_ios/core;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		42632CD316AD6D40000EB95B /* cvar_ios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 42632CF816AD6D40000EB95B /* Build configuration list for PBXNativeTarget "cvar_ios" */;
+			buildPhases = (
+				42632CD016AD6D40000EB95B /* Sources */,
+				42632CD116AD6D40000EB95B /* Frameworks */,
+				42632CD216AD6D40000EB95B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = cvar_ios;
+			productName = cvar_ios;
+			productReference = 42632CD416AD6D40000EB95B /* cvar_ios.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		42632CCB16AD6D40000EB95B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = DS;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = daisaru11;
+			};
+			buildConfigurationList = 42632CCE16AD6D40000EB95B /* Build configuration list for PBXProject "cvar_ios" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 42632CC916AD6D40000EB95B;
+			productRefGroup = 42632CD516AD6D40000EB95B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				42632CD316AD6D40000EB95B /* cvar_ios */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		42632CD216AD6D40000EB95B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42632CE316AD6D40000EB95B /* InfoPlist.strings in Resources */,
+				42632CEB16AD6D40000EB95B /* Default.png in Resources */,
+				42632CED16AD6D40000EB95B /* Default@2x.png in Resources */,
+				42632CEF16AD6D40000EB95B /* Default-568h@2x.png in Resources */,
+				42632CF216AD6D40000EB95B /* MainStoryboard.storyboard in Resources */,
+				429DC39D16C33857001FB65C /* cocacola.png in Resources */,
+				429DC39E16C33857001FB65C /* redbull.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		42632CD016AD6D40000EB95B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42632CE516AD6D40000EB95B /* main.m in Sources */,
+				42632CE916AD6D40000EB95B /* DSAppDelegate.m in Sources */,
+				42632CF516AD6D40000EB95B /* DSViewController.mm in Sources */,
+				42632D1216AD702F000EB95B /* UIImage+OpenCV.mm in Sources */,
+				42DB676616AE1733001D5226 /* CylindricalProjector.cpp in Sources */,
+				42DB676716AE1733001D5226 /* Keypoint.cpp in Sources */,
+				42DB676816AE1733001D5226 /* KeypointMatcher.cpp in Sources */,
+				42DB676916AE1733001D5226 /* MapCell.cpp in Sources */,
+				42DB676A16AE1733001D5226 /* Mapper.cpp in Sources */,
+				42DB676B16AE1733001D5226 /* Optimization.cpp in Sources */,
+				42DB676C16AE1733001D5226 /* Projector.cpp in Sources */,
+				422EE2D416AEE47E00643BCA /* MapCellStatus.cpp in Sources */,
+				422EE2D516AEE47E00643BCA /* Map.cpp in Sources */,
+				428704CA16B36268002EE9A9 /* Relocalizer.cpp in Sources */,
+				428704CB16B36268002EE9A9 /* MainProcess.cpp in Sources */,
+				429D1AFA16B9D8F600200403 /* JLinkage.cpp in Sources */,
+				429D1AFC16B9D8F600200403 /* LineExtracterLSD.cpp in Sources */,
+				429D1AFD16B9D8F600200403 /* lsd.c in Sources */,
+				429D1AFE16B9D8F600200403 /* PlanarFinder.cpp in Sources */,
+				429DC36616BFCB45001FB65C /* OptimizationGN2.cpp in Sources */,
+				429DC36716BFCB45001FB65C /* OptimizationRANSAC.cpp in Sources */,
+				429DC36816BFCB45001FB65C /* PoseUpdaterGN.cpp in Sources */,
+				429DC36916BFCB46001FB65C /* PoseUpdaterGN2.cpp in Sources */,
+				429DC36A16BFCB46001FB65C /* PoseUpdaterRANSAC.cpp in Sources */,
+				429DC38116C07407001FB65C /* Timer.cpp in Sources */,
+				429DC38216C07407001FB65C /* TimerManager.cpp in Sources */,
+				429DC38B16C0D227001FB65C /* DSBaseCaptureViewController.mm in Sources */,
+				429DC39716C0DAC2001FB65C /* EAGLView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		42632CE116AD6D40000EB95B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				42632CE216AD6D40000EB95B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		42632CF016AD6D40000EB95B /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				42632CF116AD6D40000EB95B /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		42632CF616AD6D40000EB95B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../package\"",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = iphoneos;
+				VALID_ARCHS = armv7;
+			};
+			name = Debug;
+		};
+		42632CF716AD6D40000EB95B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../package\"",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = armv7;
+			};
+			name = Release;
+		};
+		42632CF916AD6D40000EB95B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../package\"",
+				);
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "cvar_ios/cvar_ios-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				INFOPLIST_FILE = "cvar_ios/cvar_ios-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/boost/1.52.0/lib,
+				);
+				OTHER_CFLAGS = "-mno-thumb";
+				"OTHER_CPLUSPLUSFLAGS[arch=*]" = "$(OTHER_CFLAGS)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		42632CFA16AD6D40000EB95B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../package\"",
+				);
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "cvar_ios/cvar_ios-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				INFOPLIST_FILE = "cvar_ios/cvar_ios-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/boost/1.52.0/lib,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		42632CCE16AD6D40000EB95B /* Build configuration list for PBXProject "cvar_ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42632CF616AD6D40000EB95B /* Debug */,
+				42632CF716AD6D40000EB95B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		42632CF816AD6D40000EB95B /* Build configuration list for PBXNativeTarget "cvar_ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42632CF916AD6D40000EB95B /* Debug */,
+				42632CFA16AD6D40000EB95B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 42632CCB16AD6D40000EB95B /* Project object */;
+}
