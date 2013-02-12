@@ -48,9 +48,14 @@
 	// TouchEvent value
 	BOOL _isViewTouched;
 	BOOL _isViewPinched;
+	BOOL _isViewMoved;
 	CGPoint _viewTouchedPoint;
 	CGRect _outputBounds;
 	CGFloat _pinch_scale;
+	int _moveCount;
+	CGPoint _viewMoveStartPoint;
+	float _moveDeltaX;
+	float _moveDeltaY;
 
 }
 
@@ -82,6 +87,7 @@
 		_isInitialized = NO;
 		_isViewTouched = NO;
 		_isViewPinched = NO;
+		_isViewMoved = NO;
 		_doAdjust = NO;
 		//UIImage *warp_image = [UIImage imageNamed:@"sample.jpg"];
 }
@@ -399,6 +405,12 @@
 		{
 			_tracker_process->updatePlanar((double)_pinch_scale, mat_rgb);
 		}
+		// moved
+		if (_isViewMoved && _tracker_process->hasTrackPoints())
+		{
+			_tracker_process->movePlanar((double)_moveDeltaX, (double)_moveDeltaY, mat_rgb);
+		}
+
 		// adjusting
 		if (_doAdjust && _tracker_process->hasTrackPoints())
 		{
@@ -419,6 +431,7 @@
 	// reset flags
 	_isViewTouched = NO;
 	_isViewPinched = NO;
+	_isViewMoved = NO;
 	_doAdjust = NO;
 
 	//_tracker_process->debugOutput(mat_rgb);
@@ -451,6 +464,7 @@
 		_isInitialized = NO;
 		_isViewTouched = NO;
 		_isViewPinched = NO;
+		_isViewMoved = NO;
 		_doAdjust = NO;
 	}
 }
@@ -489,11 +503,35 @@
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
+	UITouch *touch = [touches anyObject];
+	_viewMoveStartPoint = [touch locationInView:self.view];
+	_moveCount = 0;
+
 	_pinch_scale = 1.0;
+	NSLog(@"touch begin");
+}
+
+- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
+{
+	UITouch *touch = [touches anyObject];
+	CGPoint loc = [touch locationInView:self.view];
+	CGPoint prevloc = [touch previousLocationInView:self.view];
+	_moveCount++;
+	NSLog(@"%f, %f", loc.x, loc.y);
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
+	if (_moveCount>10)
+	{
+		UITouch *touch = [touches anyObject];
+		CGPoint loc = [touch locationInView:self.view];
+		_isViewMoved = YES;
+		_moveDeltaX = loc.x - _viewMoveStartPoint.x;
+		_moveDeltaY = loc.y - _viewMoveStartPoint.y;
+	}
+	_moveCount = 0;
+	NSLog(@"touch end");
 }
 
 - (CGPoint)imagePointToViewPoint:(CGPoint)imagePoint
